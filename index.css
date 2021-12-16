@@ -31,8 +31,7 @@ body {
   font-weight: bold;
 }
 
-
-
+/* desktop-view */
 @media screen and (min-width: 992px) {
   .sidebar {
     width: 100%;
@@ -42,8 +41,10 @@ body {
   .sidebar a {float: left;}
   div.content {margin-left: 0;}
   .profile-nav{float:right !important;}
+  .icon{display:none !important;}
 }
 
+/* tablet-view */
 @media screen and (max-width: 991px) and (min-width:768px) {
   .sidebar a {
     text-align: center;
@@ -52,15 +53,16 @@ body {
   .profile-nav{
     display: none !important;
   }
+  .icon{display: none !important;}
 }
 
+/* mobile-view */
 @media screen and (max-width: 767px) {
   .sidebar a{
     text-align: left;
-    
-
   }
   .profile-nav{
     display:none !important;
   }
+  .icon{float: right;}
 }
