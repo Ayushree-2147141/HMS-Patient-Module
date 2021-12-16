@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="header">
-        <div class="sidebar">
+        <div class="sidebar" id="myTopnav">
             <a class="active" href="#dashboard">Dashboard</a>
             <a href="#message">Message</a>
             <a href="#reports">Reports</a>
@@ -19,5 +19,15 @@
             <a href="./profile.html" class="profile-nav">Profile</a>
         </div>
     </div>
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        </script>
 </body>
 </html>
