@@ -6,13 +6,14 @@ body{
 	align-items: center;
 	min-height: 100vh;
 	font-family: "Lato", sans-serif;
-	background: #fe8c00;  
-	background: linear-gradient(to bottom, #f83600bb, 20%, #fe8c0091); 
+	background: #ff884d;  
+	/* background: linear-gradient(to bottom, #f8360052, 30%, #fe8c0027);  */
+	background: #ff884d13;
 }
 .main{
 	width: 350px;
 	height: 500px;
-	background: rgba(255, 0, 0, 0.336);
+	background: #ff884d;
 	overflow: hidden;
 	border-radius: 10px;
 	box-shadow: 5px 20px 50px #000;
