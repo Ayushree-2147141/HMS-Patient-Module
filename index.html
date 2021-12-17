@@ -5,19 +5,83 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Login Page</title>
 </head>
 <body>
     <div class="header">
-        <div class="sidebar">
-            <a class="active" href="#dashboard">Dashboard</a>
+        <div class="sidebar" id="myTopnav">
+            <a class="active" href="index.html">Dashboard</a>
             <a href="#message">Message</a>
             <a href="#reports">Reports</a>
-            <a href="#medication">Medication</a>
+            <a href="./medication.html">Medication</a>
             <a href="#schedule">Schedule</a>
             <a href="#record">Health Record</a>
             <a href="./profile.html" class="profile-nav">Profile</a>
+            <!-- <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+             -->
         </div>
     </div>
+
+    <div class="main-content">
+      <div class="left-panel">
+        <div class="card">
+          <img src="./patient-image.jpg" alt="John" style="width:100%">
+          <h1>Patient Name</h1>
+          <p class="title">Disease Name</p>
+          <p>Disease sub-type</p>
+          <div class="card-contnet">
+            <a href="#"><i class="fa fa-file"></i></a> 
+            <a href="#"><i class="fa fa-history"></i></a>  
+            <a href="#"><i class="fa fa-upload"></i></a>  
+            <a href="#"><i class="fa fa-folder"></i></a> 
+          </div>
+        </div>
+          <div class="community">
+              <li>My Doctors</li>
+              <li>My Appointments</li>
+              <li>My Diagnosis</li>
+          </div>
+      </div>
+      <div class="center-panel">
+        <div class="center-top">
+          <div class="center-card">
+            <img src="./xray.jpg" alt="John" style="width:25%">
+            <h1> X - Ray report</h1>
+            <p>Cardiac size cannot be evaluated.  Large left pleiral effusikon is new.Small right effusio is new.The upper lungs are clear.
+              <h3> Diagnosis </h3> Detected severe accumulation of cough. Probably <span>pneumonia</span> in lungs.</p>
+               
+          </div>
+        </div>
+        <div class="center-bottom">
+          <div class="center-bottom-card">
+            <img src="./xray.jpg" alt="">
+            <img src="./xray.jpg" alt="">
+            <img src="./xray.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="right-panel">
+        <div class="right-card">
+
+        </div>
+      </div>
+  </div>
+  <div class="footer">
+    <p> <marquee behavior="" direction="right">This module is designed and developed by Ayushree Chakrabartty</marquee> </p>
+  </div>
+
+    <!-- <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        </script> -->
 </body>
 </html>
