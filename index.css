@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: "Lato", sans-serif;
+  /* overflow: hidden; */
 }
 
 .sidebar {
@@ -12,6 +13,10 @@ body {
   height: 100%;
   overflow: auto;
   
+}
+
+.right-panel img{
+  float:right;
 }
 
 .sidebar a {
@@ -91,6 +96,11 @@ body {
 .center-panel{
   margin-left:300px;
 }
+.center-card h3{
+  margin:4px 0 0 0;
+
+}
+
 
 .center-card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -107,14 +117,16 @@ body {
   float:right;
   border: 2px solid rgb(253, 109, 26);
   padding:2px;
+  margin:10px;
 }
 
 .center-bottom-card{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  width: 650px;
+  width: 630px;
   height: 150px;
-  margin:10px;
+  margin:10px 23px;
 }
+
 
 .center-card p{
   text-align: left;
@@ -142,11 +154,13 @@ justify-content: space-between;
   background-color:rgb(51, 51, 116);
   color: white;
   font-weight: bold;
-  margin-bottom: 0;
 }
 
 /* tablet-view */
 @media screen and (max-width: 991px) and (min-width:768px) {
+  body{
+    background-color:#ffece5;
+  }
   .sidebar a {
     text-align: center;
     float: none;
@@ -163,19 +177,31 @@ justify-content: space-between;
     width: 30%;
   }
   .center-card{
-    height:350px;
+    height:40%;
   }
   .center-top{
     margin-left:37%;
     margin-right: 20px !important;
+    background-color:white;
   }
-
+.center-card h1{
+  font-size: 28px;
+  float: center;
+}
   .center-bottom-card{
     height:auto;
-    margin-left:35%;
-    width:63%;
+    margin-left:39%;
+    width:50%;
+    background-color:white;
+    border-radius: 5px;
   }
-  
+.center-card p,h1{
+  font-size: smaller;
+}
+
+  .center-bottom-card img{
+    border:rgb(253, 109, 26) 2px solid;
+  }
 }
 
 
