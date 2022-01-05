@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="demo.xsl" ?>
+
+<PatientManagement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../RemoteSystemsTempFiles/demo.xsd">
+  <Login>
+    <login_id>343534</login_id>
+    <login_username>Ayushree C</login_username>
+    <login_password>ayushree78</login_password>
+  </Login>
+  <Login>
+    <login_id>4534546</login_id>
+    <login_username>Hrishik Kumar</login_username>
+    <login_password>hrishik76</login_password>
+  </Login>
+  <Login>
+    <login_id>43534545</login_id>
+    <login_username>Priyanka Yadav</login_username>
+    <login_password>priyanka35</login_password>
+  </Login>
+  <Login>
+    <login_id>34546645</login_id>
+    <login_username>Jeetank Reenesh</login_username>
+    <login_password>jeetank345</login_password>
+  </Login>
+  <Login>
+    <login_id>45465467</login_id>
+    <login_username>Divya Prasad V</login_username>
+    <login_password>dibyasfs34</login_password>
+  </Login>
+  <Login>
+    <login_id>6456657</login_id>
+    <login_username>Priya Gupta</login_username>
+    <login_password>priyabhj34</login_password>
+  </Login>
+  <Admin>
+    <user_id>3453454</user_id>
+    <username>Akshay Singhal</username>
+    <user_contact>7878382943</user_contact>
+    <user_address>SG Palya</user_address>
+  </Admin>
+  <Admin>
+    <user_id>3894543</user_id>
+    <username>Vanshika Jain</username>
+    <user_contact>7734783940</user_contact>
+    <user_address>JP Nagar</user_address>
+  </Admin>
+  <Admin>
+    <user_id>3435345</user_id>
+    <username>Ankuri Pethi</username>
+    <user_contact>8943345343</user_contact>
+    <user_address>Christ University</user_address>
+  </Admin>
+  <Admin>
+    <user_id>6487324</user_id>
+    <username>Shipra Jha</username>
+    <user_contact>7837958343</user_contact>
+    <user_address>White Field</user_address>
+  </Admin>
+  <Admin>
+    <user_id>7843789</user_id>
+    <username>Krishna Bansal</username>
+    <user_contact>7837489323</user_contact>
+    <user_address>Jayanagar</user_address>
+  </Admin>
+  <Admin>
+    <user_id>78945</user_id>
+    <username>Arunabha Dutt</username>
+    <user_contact>7878232384</user_contact>
+    <user_address>Christ University</user_address>
+  </Admin>
+  <Patient>
+    <patient_id>324324</patient_id>
+    <patient_name>Reuben Kurian</patient_name>
+    <patient_gender>male</patient_gender>
+    <registration_date>2021-02-03</registration_date>
+    <type_of_registration>online</type_of_registration>
+  </Patient>
+  <Patient>
+    <patient_id>3435345</patient_id>
+    <patient_name>Aditya Biswal</patient_name>
+    <patient_gender>male</patient_gender>
+    <registration_date>2022-03-01</registration_date>
+    <type_of_registration>offline</type_of_registration>
+  </Patient>
+  <Patient>
+    <patient_id>677822</patient_id>
+    <patient_name>Adarsh Verma</patient_name>
+    <patient_gender>female</patient_gender>
+    <registration_date>2019-07-03</registration_date>
+    <type_of_registration>offline</type_of_registration>
+  </Patient>
+  <Patient>
+    <patient_id>7389345</patient_id>
+    <patient_name>Sunny Dahit </patient_name>
+    <patient_gender>male</patient_gender>
+    <registration_date>2022-01-01</registration_date>
+    <type_of_registration>online</type_of_registration>
+  </Patient>
+  <Patient>
+    <patient_id>82392</patient_id>
+    <patient_name>Ananya Mitra</patient_name>
+    <patient_gender>female</patient_gender>
+    <registration_date>2017-07-03</registration_date>
+    <type_of_registration>online</type_of_registration>
+  </Patient>
+  <Patient>
+    <patient_id>343576</patient_id>
+    <patient_name>Rachit Desai</patient_name>
+    <patient_gender>male</patient_gender>
+    <registration_date>2012-04-05</registration_date>
+    <type_of_registration>online</type_of_registration>
+  </Patient>
+  <Medicine>
+    <drug_id>45</drug_id>
+    <drug_name>Paracetamol</drug_name>
+    <drug_dosage>1</drug_dosage>
+    <drug_type>tablet</drug_type>
+  </Medicine>
+  <Medicine>
+    <drug_id>34</drug_id>
+    <drug_name>Electrol</drug_name>
+    <drug_dosage>1</drug_dosage>
+    <drug_type>liquid</drug_type>
+  </Medicine>
+  <Medicine>
+    <drug_id>65</drug_id>
+    <drug_name>Vitamin-B</drug_name>
+    <drug_dosage>1</drug_dosage>
+    <drug_type>capsule</drug_type>
+  </Medicine>
+  <Medicine>
+    <drug_id>56</drug_id>
+    <drug_name>Entraquinol</drug_name>
+    <drug_dosage>3</drug_dosage>
+    <drug_type>tablet</drug_type>
+  </Medicine>
+  <Medicine>
+    <drug_id>12</drug_id>
+    <drug_name>Aprezo</drug_name>
+    <drug_dosage>2</drug_dosage>
+    <drug_type>tablet</drug_type>
+  </Medicine>
+  <Medicine>
+    <drug_id>89</drug_id>
+    <drug_name>Cough Syrup</drug_name>
+    <drug_dosage>2</drug_dosage>
+    <drug_type>liquid</drug_type>
+  </Medicine>
+  <Medicine>
+    <drug_id>76</drug_id>
+    <drug_name>Cetrigen</drug_name>
+    <drug_dosage>2</drug_dosage>
+    <drug_type>tablet</drug_type>
+  </Medicine>
+  <Medicine>
+    <drug_id>43</drug_id>
+    <drug_name>Moistane</drug_name>
+    <drug_dosage>4</drug_dosage>
+    <drug_type>inedible drops</drug_type>
+  </Medicine>
+  <MedicalRecords>
+    <tests>HIV</tests>
+    <diagnosis>loss of apetite</diagnosis>
+    <patient_id>78943</patient_id>
+    <type_of_registration>general</type_of_registration>
+  </MedicalRecords>
+  <MedicalRecords>
+    <tests>RBC</tests>
+    <diagnosis>reduced melanin</diagnosis>
+    <patient_id>43535</patient_id>
+    <type_of_registration>special</type_of_registration>
+  </MedicalRecords>
+  <MedicalRecords>
+    <tests>TC</tests>
+    <diagnosis>sleepy</diagnosis>
+    <patient_id>343543</patient_id>
+    <type_of_registration>special</type_of_registration>
+  </MedicalRecords>
+  
+  
+  <MedicalRecords>
+    <tests>CBC</tests>
+    <diagnosis>swollen finger</diagnosis>
+    <patient_id>37489</patient_id>
+    <type_of_registration>general</type_of_registration>
+  </MedicalRecords>
+  
+  <MedicalRecords>
+    <tests>BMP</tests>
+    <diagnosis>malaria</diagnosis>
+    <patient_id>67231</patient_id>
+    <type_of_registration>general</type_of_registration>
+  </MedicalRecords>
+  
+  <MedicalRecords>
+    <tests>CMP</tests>
+    <diagnosis>scaly patches</diagnosis>
+    <patient_id>738942</patient_id>
+    <type_of_registration>special</type_of_registration>
+  </MedicalRecords>
+  
+  <MedicalRecords>
+    <tests>yiu</tests>
+    <diagnosis>now i dont know</diagnosis>
+    <patient_id>9321</patient_id>
+    <type_of_registration>general</type_of_registration>
+  </MedicalRecords>
+  
+  <MedicalRecords>
+    <tests>gjhl</tests>
+    <diagnosis>now i am tired</diagnosis>
+    <patient_id>3435</patient_id>
+    <type_of_registration>special</type_of_registration>
+  </MedicalRecords>
+  
+  <Symptoms>
+    <dr_id>56787</dr_id>
+    <symptoms>hallucinations</symptoms>
+    <patient_id>78923</patient_id>
+  </Symptoms>
+  
+  <Symptoms>
+    <dr_id>89021</dr_id>
+    <symptoms>patches</symptoms>
+    <patient_id>6879</patient_id>
+  </Symptoms>
+  
+  <Appointment>
+    <dr_id>789934</dr_id>
+    <dr_name>Dr. Ashwin Kumar V.</dr_name>
+    <appt_time>10:00:00</appt_time>
+    <appt_id>8921</appt_id>
+    <appt_type>special</appt_type>
+    <appt_date>2001-01-01</appt_date>
+    <patient_id>78992</patient_id>
+  </Appointment>
+  
+  <Appointment>
+    <dr_id>890312</dr_id>
+    <dr_name>Dr. Joseph K Iype</dr_name>
+    <appt_time>14:02:00</appt_time>
+    <appt_id>78921</appt_id>
+    <appt_type>general</appt_type>
+    <appt_date>2022-07-06</appt_date>
+    <patient_id>67823</patient_id>
+  </Appointment>
+  
+  <Test>
+    <test_type>gijhod</test_type>
+    <test_id>78</test_id>
+    <test_name>haemoglobin check</test_name>
+    <consultant>Mr. Sandeep Sutradhar</consultant>
+    <test_pat_id>2324</test_pat_id>
+  </Test>
+
+<Test>
+    <test_type>hjkfsd</test_type>
+    <test_id>6779</test_id>
+    <test_name>malaria check</test_name>
+    <consultant>Shikha Shukla</consultant>
+    <test_pat_id>5672</test_pat_id>
+  </Test>
+  
+  <History>
+    <prev_diagnosis>arthritis</prev_diagnosis>
+    <heredity>true</heredity>
+    <prev_reports>you are not well</prev_reports>
+    <patient_id>5788</patient_id>
+  </History>
+  
+   <History>
+    <prev_diagnosis>Sleeping Sickness</prev_diagnosis>
+    <heredity>false</heredity>
+    <prev_reports>too much intake of caffeine</prev_reports>
+    <patient_id>7894</patient_id>
+  </History>
+  
+</PatientManagement>

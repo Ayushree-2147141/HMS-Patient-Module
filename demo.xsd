@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="PatientManagement">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Login" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="login_id" type="xs:string">
+							</xs:element>
+							
+							<xs:element name="login_username" type="MyUsername">
+							</xs:element>
+							
+							<xs:element name="login_password" type="xs:string">
+							</xs:element>
+						</xs:sequence>
+
+					</xs:complexType>
+					
+				</xs:element>
+				
+				<xs:element name="Admin" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="user_id" type="xs:string">
+							</xs:element>
+							
+							<xs:element name="username" type="MyUsername">
+							</xs:element>
+							
+							<xs:element name="user_contact" type="MyContact">
+							</xs:element>
+							
+							<xs:element name="user_address" type="xs:string">
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+
+				</xs:element>
+
+				
+				<xs:element name="Patient" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="patient_id" type="xs:string">
+							</xs:element>
+							
+							<xs:element name="patient_name"  type="xs:string">
+							</xs:element>
+							
+							<xs:element name="patient_gender" type="MyGender">
+							</xs:element>
+							
+							<xs:element name="registration_date" type="xs:date">
+							</xs:element>
+							
+							<xs:element name="type_of_registration" type="xs:string">
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				
+				<xs:element name="Medicine" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="drug_id" type="xs:integer">
+							</xs:element>
+							
+							<xs:element name="drug_name"  type="xs:string">
+							</xs:element>
+							
+							<xs:element name="drug_dosage" type="xs:integer">
+							</xs:element>
+							
+							<xs:element name="drug_type" type="xs:string">
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				
+				<xs:element name="MedicalRecords" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="tests" type="xs:string">
+							</xs:element>
+							
+							<xs:element name="diagnosis"  type="xs:string">
+							</xs:element>
+							
+							<xs:element name="patient_id" type="xs:string">
+							</xs:element>
+							
+							<xs:element name="type_of_registration" type="xs:string">
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				
+				<xs:element name="Symptoms" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="dr_id" type="xs:string">
+							</xs:element>
+							
+							<xs:element name="symptoms"  type="xs:string">
+							</xs:element>
+							
+							<xs:element name="patient_id" type="xs:string">
+							</xs:element>
+							
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				
+				<xs:element name="Appointment" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="dr_id" type="xs:string">
+							</xs:element>
+							
+							<xs:element name="dr_name"  type="xs:string">
+							</xs:element>
+							
+							<xs:element name="appt_time" type="xs:time">
+							</xs:element>
+							
+							<xs:element name="appt_id" type="xs:string">
+							</xs:element>
+							
+							<xs:element name="appt_type" type="xs:string">
+							</xs:element>
+							
+							<xs:element name="appt_date" type="xs:date">
+							</xs:element>
+							
+							<xs:element name="patient_id" type="xs:string">
+							</xs:element>
+							
+							
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				
+				<xs:element name="Test" maxOccurs="unbounded">
+				
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="test_type" type="xs:string">
+							</xs:element>
+							
+							<xs:element name="test_id"  type="xs:string">
+							</xs:element>
+							
+							<xs:element name="test_name" type="xs:string">
+							</xs:element>
+							
+							<xs:element name="consultant" type="xs:string">
+							</xs:element>
+							
+							<xs:element name="test_pat_id" type="xs:string">
+							</xs:element>
+							
+						</xs:sequence>
+					</xs:complexType>
+									
+				</xs:element>	
+				
+				<xs:element name="History" maxOccurs="unbounded">
+				
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="prev_diagnosis" type="xs:string">
+							</xs:element>
+							
+							<xs:element name="heredity"  type="xs:boolean">
+							</xs:element>
+							
+							<xs:element name="prev_reports" type="xs:string">
+							</xs:element>
+							
+							<xs:element name="patient_id" type="xs:string">
+							</xs:element>
+							
+						</xs:sequence>
+					</xs:complexType>
+									
+				</xs:element>				
+				
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+										
+					<xs:simpleType name="MyContact">
+						<xs:restriction base="xs:integer">
+						<xs:minInclusive value="7000000000"></xs:minInclusive>
+						<xs:maxInclusive value="9999999999"></xs:maxInclusive>
+						</xs:restriction>
+					
+					</xs:simpleType>
+					
+					<xs:simpleType name="MyUsername">
+						<xs:restriction base="xs:string">
+							<xs:minLength value="8"></xs:minLength>
+							<xs:maxLength value="16"></xs:maxLength>
+						</xs:restriction>
+					</xs:simpleType>
+					
+					<xs:simpleType name="MyGender">
+						<xs:restriction base="xs:string">
+							<xs:pattern value="male|female"></xs:pattern>
+						</xs:restriction>
+					</xs:simpleType>
+</xs:schema>
