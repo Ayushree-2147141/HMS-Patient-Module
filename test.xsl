@@ -12,61 +12,41 @@ body {
 }
 
 .header {
-  overflow: hidden;
-  background-color: #f1f1f1;
-  padding: 20px 10px;
+  padding: 10px 10px;
 }
 
 .header a {
   float: left;
   color: black;
+  text-decoration: none;
   text-align: center;
   padding: 12px;
-  text-decoration: none;
-  font-size: 18px; 
+  font-size: 20px; 
   line-height: 25px;
   border-radius: 4px;
 }
 
-.header a.logo {
-  font-size: 25px;
-  font-weight: bold;
-}
+
 table {
   
   border-spacing: 0;
   width: 100%;
-  border: 1px solid #ddd;
+  border: 1px solid red;
 }
 
 th, td {
   text-align: left;
   padding: 8px;
 }
-tr:nth-child(even){background-color: #f2f2f2}
 
 
-@media screen and (max-width: 500px) {
-  .header a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  
-  .header-right {
-    float: none;
-  }
-}
+
 
 
 </style>
-            <div class="header">
-  <a href="#default" class="logo">Employee Management System</a>
- 
-</div>
 
-<div style="padding-left:20px">
-  <h1>Employee Details</h1>
+<div>
+  <h1 style="align:center">Employee Details</h1>
   <p>
   <table style="overflow-x:auto;">
   <tr>
