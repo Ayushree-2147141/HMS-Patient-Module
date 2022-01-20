@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="Company">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Employee" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>			
+						
+							<xs:element name="Emp_name" type="xs:string">
+							</xs:element>
+						
+							<xs:element name="Emp_age" type="MyAge">
+							</xs:element>
+							
+							<xs:element name="Emp_salary" type="MySal">
+							</xs:element>
+							
+							<xs:element name="Emp_emailid" type="xs:string">
+							</xs:element>
+							
+							<xs:element name="Emp_phonenum" type="xs:integer">
+							</xs:element>
+							
+							<xs:element name="Emp_designation" type="xs:string">
+							</xs:element>
+								
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:simpleType name="MyAge">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="20"></xs:minInclusive>
+            <xs:maxInclusive value="80"></xs:maxInclusive>
+        </xs:restriction>
+    </xs:simpleType>
+	
+	<xs:simpleType name="MySal">
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="50000"></xs:minInclusive>
+			<xs:maxInclusive value="200000"></xs:maxInclusive>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="MyPhone">
+		<xs:restriction base="xs:positiveInteger">
+          <xs:pattern value="[0-9]" />
+       </xs:restriction>
+	</xs:simpleType>
+	
+	
+</xs:schema>
