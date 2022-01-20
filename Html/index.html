@@ -4,51 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../Css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Login Page</title>
 </head>
 <body>
-  <script>
-    var xmlDoc
-  var xmlFile ='demo.xml'
-
-//function to load xml doc
-function loadXML()
-{
-    var xmlReq = new XMLHttpRequest;
-    xmlReq.onreadystatechange = function()
-    {
-        console.log(xmlReq.readyState)
-        if((xmlReq.readyState == 4) && (xmlReq.status == 200))
-        {
-            //xml doc successfully retrieved
-            console.log(xmlReq.readyState)
-
-            xmlDoc = xmlReq.responseXML
-            displayTable()
-        }
-    }
-    xmlReq.open('GET',xmlFile, true)
-    xmlReq.send()
-}
-  </script>
     <div class="header">
         <div class="sidebar" id="myTopnav">
-            <a class="active" href="index.html">Dashboard</a>
-            <a href="message.html">Message</a>
-            <a href="report.html">Reports</a>
-            <a href="medication.html">Medication</a>
-            <a href="#schedule">Schedule</a>
-            <a href="record.html">Health Record</a>
-            <a href="profile.html" class="profile-nav">Profile</a>
+            <a class="active" href="./index.html">Dashboard</a>
+            <a href="./message.html">Message</a>
+            <a href="./report.html">Reports</a>
+            <a href="./medication.html">Medication</a>
+            <a href="./schedule.html">Schedule</a>
+            <a href="./record.html">Health Record</a>
+            <a href="./profile.html" class="profile-nav">Profile</a>
         </div>
     </div>
 
     <div class="main-content">
       <div class="left-panel">
         <div class="card">
-          <img src="./patient-image.jpg" alt="John" style="width: 100%">
+          <img src="../Images/patient-image.jpg" alt="John" style="width: 100%">
           <h1>Patient Name</h1>
           <p class="title">Disease Name</p>
           <p>Disease sub-type</p>
@@ -68,7 +44,7 @@ function loadXML()
       <div class="center-panel">
         <div class="center-top">
           <div class="center-card">
-            <img src="./xray.jpg" alt="John" style="width:25%">
+            <img src="../Images/xray.jpg" alt="John" style="width:25%">
             <h1> Some Report Title</h1>
             <p class="demo-text">Anything relevant to the report will be described here. Lorem ipsum dolor sit amet. Ut reprehenderit doloribus ut quibusdam velit ab galisum laborum ut enim dolorem rem beatae internos sed quisquam natus qui voluptas expedita. Cupiditate enim vel consectetur galisum ea saepe impedit            Ab quod perspiciatis in doloremque labore est voluptatem internos  At dolores illum sed perspiciatis quis et inventore voluptatum est fuga quam.
               <h3> Diagnosis </h3> Detected severe accumulation of cough. Probably <span>pneumonia</span> in lungs.</p>    
@@ -81,9 +57,9 @@ function loadXML()
         </div>
         <div class="center-bottom">
           <div class="center-bottom-card">
-            <img src="./xray.jpg" alt="">
-            <img src="./xray.jpg" alt="">
-            <img src="./xray.jpg" alt="">
+            <img src="../Images/xray.jpg" alt="">
+            <img src="../Images/xray.jpg" alt="">
+            <img src="../Images/xray.jpg" alt="">
           </div>
         </div>
       </div>
