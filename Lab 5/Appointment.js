@@ -1,7 +1,7 @@
 /*--JS for DOM Parser--*/
 
 var xmlDoc
-var xmlFile ='Appointment.xml'
+var xmlFile ='../Lab 5/Appointment.xml'
 
 //function to load xml doc
 function loadXML()
@@ -27,7 +27,7 @@ function loadXML()
 function displayTable()
 {
     var i;
-    var table = "<tr><th>Patient Name</th><th>Patient Id</th><th>Doctor name</th><th>Doctor Id</th><th>Appointment date</th><th>Appointment time</th><th>Gender</th><th>Delete</th></tr>"
+    var table = "<tr><th>Patient Name</th><th>Patient Id</th><th>Doctor name</th><th>Doctor Id</th><th>Appointment date</th><th>Appointment time</th><th>Gender</th><th>Edit</th><th>Delete</th></tr>"
 
     var x = xmlDoc.getElementsByTagName("Patient")
     for (i = 0; i < x.length; i++)
@@ -37,10 +37,10 @@ function displayTable()
             x[i].getElementsByTagName("Patient_id")[0].childNodes[0].nodeValue + "</td><td>" +
             x[i].getElementsByTagName("Doctor_name")[0].childNodes[0].nodeValue + "</td><td>" +
             x[i].getElementsByTagName("Doctor_id")[0].childNodes[0].nodeValue + "</td><td>" +
-            x[i].getElementsByTagName("Appointment_date")[0].childNodes[0].nodeValue + "</td>" +
+            x[i].getElementsByTagName("Appointment_date")[0].childNodes[0].nodeValue + "</td><td>" +
             x[i].getElementsByTagName("Appointment_time")[0].childNodes[0].nodeValue + "</td><td>" +
-            x[i].getElementsByTagName("Patient_gender")[0].childNodes[0].nodeValue + "</td><td>" +
-            // "<td><span class='material-icons' onclick='editRecord(" +i+ ")'>edit</span></td>" +
+            x[i].getElementsByTagName("Patient_gender")[0].childNodes[0].nodeValue + "</td>" +
+            "<td><span class='material-icons' onclick='editRecord(" +i+ ")'>edit</span></td>" +
             "<td><span class='material-icons' onclick='deleteRecord(" +i+ ")'>delete</span></td></tr>";
     }
     document.getElementById("table").innerHTML = table
