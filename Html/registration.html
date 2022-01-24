@@ -98,37 +98,18 @@
                 span3.style.color="black";
             }
         }
-        function check(event)
+        function checkusername(event)
         {
-            var username = document.getElementById('username');
-            var password = document.getElementById('pwd');
-
-            if(username.value.trim()=="")
-           {
-               alert("Blank Username");
-               username.style.border="solid 3px red";
-               document.getElementById("lbuser").style.visibility="visible";
-               return false;
-           }
-           else if(password.value.trim()=="")
-           {
-               alert("Blank Password");
-               return false;
-           }
-           else if(password.value.trim().length<8)
-           {
-               alert("Password is too short");
-               return false;
-           }
-
-            // digit keys locked
             let code = event.which;
-            if(code>47 && code<58)
-                return false;
-            else
-                return true;
-            
-            
+            var username = document.getElementById('username');
+            var ulength = username.length;
+            var spuser = document.getElementById('invalid_username');
+            var regex = /^$/;
+
+            if(username.value.trim() == "")
+            {
+                spuser.innerText="Blank Username!";
+            }
         }
     </script>
 
@@ -197,11 +178,13 @@
                     <div class="row">
                         <div class="col">
                             <label for="username">Username:</label>
-                            <input type="text" placeholder="Enter your username" id="username" onkeypress="return check(event)" required>
+                            <input type="text" placeholder="Enter your username" id="username" onkeypress="checkusername(event)" required>
+                            <span id="invalid_username"></span>
                         </div>
                         <div class="col">
                             <label for="pwd">Password:</label>
                             <input type="password" placeholder="Enter your password" id="pwd" required>
+                            <span id="invalid_pwd"></span>
                         </div>
                     </div> 
                     </div>       
