@@ -36,6 +36,7 @@ body{
 .main-row-1{
     /* background-color:#FDC830; */
     background-image: linear-gradient(to bottom, #fdc830, #feb123);
+    height: 170px;
     
     
 }
