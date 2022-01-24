@@ -103,22 +103,25 @@
             var username = document.getElementById('username');
             var ulength = username.length;
             var spuser = document.getElementById('invalid_username');
-            var regex = /([a-zA-Z0-9_.]+)/;
+            var regex = /([a-zA-Z0-9_.]{8,17})/;
             var trimusername = username.value.trim();
 
-            if(trimusername == "")
+
+            if(regex.test(trimusername.value))
             {
-                spuser.innerText="Blank Username!";
+                if(trimusername.length > 8 && trimusername.length < 15)
+                {
+                    spuser.innerText = "valid Username!";
+                    spuser.style.color="lime";
+                    username.style.border="lime solid 3px";
+                    return true;
+                }   
             }
-            else if(regex.test(trimusername.value))
+            else if(username.value.trim() == "")
             {
-                spuser.innerText = "Invalid Username!";
-            }
-            else
-            {
-                spuser.innerText = "Valid Username!";
-                spuser.style.color="lime";
-                spuser.style.style = "italic";
+                alert('Invalid username');
+                spuser.innerText = "InValid Username!";  
+                return false;              
             }
         }
     </script>
