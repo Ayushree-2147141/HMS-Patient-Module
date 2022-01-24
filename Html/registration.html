@@ -100,15 +100,25 @@
         }
         function checkusername(event)
         {
-            let code = event.which;
             var username = document.getElementById('username');
             var ulength = username.length;
             var spuser = document.getElementById('invalid_username');
-            var regex = /^$/;
+            var regex = /([a-zA-Z0-9_.])+/;
+            var trimusername = username.value.trim();
 
-            if(username.value.trim() == "")
+            if(trimusername == "")
             {
                 spuser.innerText="Blank Username!";
+            }
+            else if(regex.test(trimusername.value))
+            {
+                spuser.innerText = "Invalid Username!";
+            }
+            else
+            {
+                spuser.innerText = "Valid Username!";
+                spuser.style.color="lime";
+                spuser.style.style = "italic";
             }
         }
     </script>
@@ -178,7 +188,7 @@
                     <div class="row">
                         <div class="col">
                             <label for="username">Username:</label>
-                            <input type="text" placeholder="Enter your username" id="username" onkeypress="checkusername(event)" required>
+                            <input type="text" placeholder="Enter your username" id="username" onkeypress="return checkusername(event)" required>
                             <span id="invalid_username"></span>
                         </div>
                         <div class="col">
