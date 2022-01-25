@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function validate() 
+        {
+            const regex = /^([A-Za-z]{4,20})+$/;
+            var spfname = document.getElementById('fnamesp');
+            var fname = document.getElementById('firstname');
+
+            if(regex.test(fname)) {
+                spfname.innerText="Valid!";
+                return true;
+            }
+            else
+            {
+                spfname.innerText="Invalid!";
+                return false;
+            }
+
+        }
+    </script>
+    <form>
+        <label for="firstname">Firstname:</label>
+        <input type="text" name="firstname" id="firstname" onkeypress="validate(event)">
+        <span id="fnamesp"></span>
+    </form>
+</body>
+</html>

@@ -31,10 +31,10 @@
             var span=document.getElementById('emailspan');
             
 
-            const regex1=/^([a-z0-9\.-]+)@([a-z0-9]+)\.([a-z]{1,8})$/;
-            const regex2= /^([a-z0-9\.-]+)@([a-z0-9]+)\.([a-z]{1,20})\.([a-z]{1,8})$/;
+            // const regex1=/^([a-z0-9\.-]+)@([a-z0-9]+)\.([a-z]{1,8})$/;
+            const regex2= /^\w+([\.-]?\w+)+@(christuniversity.in | christuniversity.com)$/;
 
-            if((regex1.test(email.value)) || (regex2.test(email.value)) )
+            if((regex2.test(email.value)) )
             {
                 span.innerText="Valid Email id!";
                 span.style.color="lime";              
@@ -45,6 +45,14 @@
                 span.innerText="Invalid Email Id!";
                 span.style.color="black";
             }
+        }
+        function numcheck(event)
+        {
+            let keycode = event.which;
+            if(keycode>47 && keycode<58)
+                return false;
+            else
+                return true;
         }
         function validate_houseno()
         {
@@ -69,7 +77,7 @@
             var phonenum2 = document.getElementById("phonenum2");
             var phonenum3 = document.getElementById("phonenum3");
 
-            const regex_phone = /^\d{9}$/;
+            const regex_phone = /^[0-9]{9}$/;
             
             var span1 = document.getElementById("spanphonenum1");
             var span2 = document.getElementById("spanphonenum2");
@@ -124,13 +132,50 @@
                 return false;              
             }
         }
+        function checkpwd(event)
+        {
+            var pwd = document.getElementById('pwd');
+            const regex = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()])(?=\\S+$).{8, 20}$/;
+            var spwd = document.getElementById('invalid_pwd');
+            if(regex.test(pwd))
+            {
+                spwd.innerText="Valid pwd";
+                return true;
+            }
+            else
+            {
+                spwd.innerText="InValid pwd";
+                return false;
+            }
+        }
+        function validate()
+        {
+            var pwd = document.getElementById('pwd').value;
+            const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[A-Za-z0-9])(?=.{8,})$/;
+            
+            var spwd = document.getElementById('invalid_pwd');
+            if(!pwd.trim() == "" && regex.test(pwd.trim()))
+            {
+                // alert("Blank password");
+                // pwd.style.border = "2px solid red";
+
+                spwd.innerText="Valid!";
+
+            }
+            // else if(regex.test(pwd.trim()))
+            // {
+            //     spwd.innerText="Valid!";
+            //     pwd.style.border = "2px solid green";
+            // }
+
+        }
     </script>
 
     <div class="header">
         <h2>Registration Form</h2>
     </div>
     <div class="section">
-        <form action="return validate()">
+        <form onsubmit="return validate()" action="../Html/index.html">
             <fieldset>
                 <legend>Personal Details</legend>
                 <div class=" main-row main-row-1">
@@ -147,17 +192,17 @@
                             </select>
     
                             <label for="firstname">Firstname:</label>
-                            <input type="text" name="firstname" id="firstname">
+                            <input type="text" name="firstname" id="firstname" onkeypress="return numcheck(event)">
                         </div>
                         
                         <div class="col">
                             <label for="middlename">Middlename:</label>
-                            <input type="text" name="middlename" id="middlename">
+                            <input type="text" name="middlename" id="middlename" onkeypress="return numcheck(event)">
                         </div>
                        
                         <div class="col">
                             <label for="lastname">Lastname:</label>
-                            <input type="text" name="lastname" id="lastname">
+                            <input type="text" name="lastname" id="lastname" onkeypress="return numcheck(event)">
                         </div>
                     </div>
                     <div class="row">
@@ -196,7 +241,7 @@
                         </div>
                         <div class="col">
                             <label for="pwd">Password:</label>
-                            <input type="password" placeholder="Enter your password" id="pwd" required>
+                            <input type="password" placeholder="Enter your password" id="pwd" onkeyup="validate()" required>
                             <span id="invalid_pwd"></span>
                         </div>
                     </div> 
@@ -390,11 +435,11 @@
 
                         </div>
                         
-                        <div class="col">
+                        <!-- <div class="col">
                             <label for="phonenum2">Contact<span class="contact">(2)</span>:</label>
                             <input type="tel" name="phonenumber2" id="phonenum2" onkeydown="validate_phonenumber()">
-                            <span id="spanphonenum"></span>
-                        </div>
+                            <span id="spanphonenum2"></span>
+                        </div> -->
                        
                         <div class="col">
                             <label for="email">Email id:</label>
@@ -406,7 +451,7 @@
                         <div class="col">
                             <label for="phonenum3">Attendant's Contact:</label>
                             <input type="tel" name="phonenumber" id="phonenum3" onkeydown="validate_phonenumber()">
-                            <span id="spanphonenum"></span>
+                            <span id="spanphonenum3"></span>
                         </div>
                         <div class="col">
                             <label for="address3">Attendant's address:</label>
