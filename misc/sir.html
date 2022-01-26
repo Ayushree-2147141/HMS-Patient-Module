@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var email = document.getElementById("email");
+    var pwd = document.getElementById("pwd");
+    var span = document.getElementsByTagName('span');
+
+    function blankpwd()
+    {
+      if(pwd.value.trim() == "")
+        {
+          span[1].innerText = "Blank Password!";
+        }
+    }
+    function validate()
+    {  
+      if(email.value.trim() == "")
+      {
+        span[0].innerText = "Blank Email!";
+      }
+      blankpwd();
+      
+       
+      email.oninput = function()
+      {
+        
+        const regex2= /^\w+([\.-]?\w+)+@(christuniversity.in|christuniversity.com)$/;
+        if(regex2.test(email.value))
+        {
+          span[0].innerText="Your Email is Valid";
+          span[0].style.color="lime";  
+        }
+        else
+        {
+          span[0].innerText="Invalid Email Id";
+          span[0].style.color="red";
+        }
+      }
+    }
+
+  </script>
+
+  <form onsubmit="return validate()">
+    <input type="text" name="email" id="email" placeholder="Email">
+    <span></span> <br> <br> 
+    <input type="password" name="pwd" id="pwd" placeholder="Password">
+    <span></span> <br> <br>
+    <button type="submit" onclick="validate()">Submit</button>
+  </form>
+
+  
+</body>
+</html>

@@ -1,0 +1,19 @@
+.header
+{
+    text-align: center;
+}
+.row
+{
+    display: inline-block;
+}
+
+.right
+{
+    color:red;
+    display: inline-block;
+}
+
+.section
+{
+    align-items: center;
+}

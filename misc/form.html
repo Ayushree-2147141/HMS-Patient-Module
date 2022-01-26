@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Account registration form</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="./form.css">
+  </head>
+  <body>
+    <div class="main-block">
+    <form action="/">
+      <h1>Create a free account</h1>
+      <fieldset>
+        <legend>
+          <h3>Account Details</h3>
+        </legend>
+        <div  class="account-details">
+          <div><label>Username<span>*</span></label><input type="text" name="username"></div>
+          <div><label>Password<span>*</span></label><input type="password" name="name"></div>
+          <div><label>Email<span>*</span></label><input type="email" name="name"></div>
+          <div><label>Repeat password<span>*</span></label><input type="password" name="name"></div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>
+          <h3>Personal Details</h3>
+        </legend>
+        <div  class="personal-details">
+          <div>
+            <div><label>Name<span>*</span></label><input type="text" name="name" required></div>
+            <div><label>Phone<span>*</span></label><input type="text" name="name" required></div>
+            <div><label>Street</label><input type="text" name="name"></div>
+            <div><label>City<span>*</span></label><input type="text" name="name" required></div>
+            <div>
+              <label>Country<span>*</span></label>  
+              <select>
+                <option value=""></option>
+                <option value="Armenia">Armenia</option>
+                <option value="Russia">Russia</option>
+                <option value="Germany">Germany</option>
+                <option value="France">France</option>
+                <option value="USA">USA</option>
+                <option value="UK">UK</option>
+              </select>
+            </div>
+            <div><label>Website</label><input type="text" name="name"></div>
+          </div>
+          <div>
+            <div>
+              <label>Gender<span>*</span></label>
+              <div class="gender">
+                <input type="radio" value="none" id="male" name="gender" required/>
+                <label for="male" class="radio">Male</label>
+                <input type="radio" value="none" id="female" name="gender" required/>
+                <label for="female" class="radio">Female</label>
+              </div>
+            </div>
+            <div class="birthdate">
+              <label>Birthdate*</label>
+              <input type="date" name="birthdate" id="bdate">
+              
+            </div>
+            <div>
+              <label>Nationality*</label>              
+              <select>
+                <option value=""></option>
+                <option value="Armenian">Armenian</option>
+                <option value="Russian">Russian</option>
+                <option value="German">German</option>
+                <option value="French">French</option>
+                <option value="American">American</option>
+                <option value="English">English</option>
+              </select>
+            </div>
+            <div>
+              <label>Children*</label>
+              <div class="children"><input type="checkbox" name="name" required></div>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>
+          <h3>Terms and Mailing</h3>
+        </legend>
+        <!-- <div  class="terms-mailing">
+          <div class="checkbox">
+            <input type="checkbox" name="checkbox"><span>I accept the <a href="https://www.w3docs.com/privacy-policy">Privacy Policy for W3Docs.</a></span>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" name="checkbox"><span>I want to recelve personallzed offers by your site</span>
+          </div>
+        </div> -->
+      </fieldset>
+      <button type="submit" href="/">Submit</button>
+    </form>
+    </div> 
+  </body>
+</html>

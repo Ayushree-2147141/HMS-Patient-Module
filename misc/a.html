@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">   
+        .card {
+        /* Add shadows to create the "card" effect */
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        height: 73vw;
+        width: 30vw;
+        margin-left: 35vw;
+        margin-top: 2vw;
+        background-color: white;
+    }
+ 
+    .info {
+        margin-left: 2vw;
+    }
+
+    .info input[type=text],input[type=email],input[type=password] {
+        width: 25vw;
+        margin-top: 1vw;
+        height: 2.5vw;
+        border-radius: 2vw;
+    }
+
+    .info label {
+        font-size: 1.3vw;
+    }
+
+    .info button {
+        color: white;
+        font-size: 1vw;
+    }
+
+    /* On mouse-over, add a deeper shadow */
+    .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    /* Add some padding inside the card container */
+    .container {
+        padding: 2px 16px;
+    }
+
+    .btn-grad {
+        background-image: linear-gradient(to right, #00d2ff 0%, #3a7bd5 51%, #00d2ff 100%)
+    }
+
+    .btn-grad {
+        margin: 10px;
+        padding: 15px 45px;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 0.5s;
+        background-size: 200% auto;
+        color: white;
+        box-shadow: 0 0 20px #eee;
+        border-radius: 10px;
+        display: block;
+        margin-left: 8vw;
+        margin-top: 2vw;
+    }
+
+    .btn-grad:hover {
+        background-position: right center;
+        /* change the direction of the change here */
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .header {
+        height: 10vw;
+        align-content: center;
+        background-color: black;
+        color: white;
+        width: 100vw;
+        margin-left: -1vw;
+        margin-top: -2vw;
+    }
+
+    .logoimg {
+        position: absolute;
+        height: 5vw;
+        width: 15vw;
+        margin-top: 2.2vw;
+        margin-left: 1vw;
+    }
+        span
+        {
+            display: block;
+            margin-left: 20px;
+            color: red;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img class="logoimg" src="logo.jpg"></img>
+        <center>
+            <h1><br>Christ University</h1>
+            <p>Dharmaram College Post, Hosur Road, Bengaluru - 560029,Karnataka,India</p>
+            <p>Tel: +91 804012 9100 / 9600</p>
+        </center>
+    </div>
+    <div class="card">
+        <h1>
+            <center>Feedback Form:</center>
+        </h1>
+        <div class="info">
+            <form action="" onsubmit="validate()">
+                <h2>Student Information:-</h2>
+                <input type="text" name="name" id="name" placeholder="Full-Name" oninput="checknm(this)"><br>
+                <input type="text" name="add" id="add" placeholder="Address"><br>
+               <input type="email" id="email" placeholder="Email-id">
+               <span></span>
+               <input type="password" name="psw1" id="psw1" placeholder="Password"><br><br>
+               <h2>What do you like in college:-</h2> <br>
+               <input type="checkbox" id="student" name="student" value="Student">
+               <label for="student">Student</label><br>
+               <input type="checkbox" id="location" name="location" value="Location">
+               <label for="location">Location</label><br>
+               <input type="checkbox" id="campus" name="campus" value="Campus">
+               <label for="campus">Campus</label><br>
+               <input type="checkbox" id="atmosphere" name="atmosphere" value="Atmosphere">
+               <label for="atmosphere">Atmosphere</label><br>
+               <input type="checkbox" id="dorm" name="dorm" value="Dorm-Rooms">
+               <label for="dorm">Dorm-Rooms</label><br>
+               <input type="checkbox" id="sports" name="sports" value="Sports">
+               <label for="sports">Sports</label><br><br>
+               <h2>How did you know about Christ University?</h2><br>
+               <input type="radio" id="friends" name="know" value="friends">
+               <label for="friends">Friends</label><br>
+               <input type="radio" id="tel" name="know" value="television">
+               <label for="tel">Television</label><br>
+               <input type="radio" id="net" name="know" value="internet">
+               <label for="net">Internet</label><br>
+               <input type="radio" id="other" name="know" value="other">
+               <label for="other">Other</label><br><br>
+               <label for="review">
+                   <h2>Comments:-</h2>
+               </label><br>
+               <textarea id="review" name="review" rows="4" cols="50">
+       </textarea><br>
+               <button type="submit" class="btn-grad">SUBMIT</button>
+       </form>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    var email=document.getElementById('email');
+    var span=document.getElementsByTagName('span');
+    email.oninput=function()
+    {
+       const regex1=/^\w+([\.-]?\w+)+@(christuniversity.in|christuniversity.com)$/;
+       const regex2= /^\w+([\.-]?\w+)+@(christuniversity.in|christuniversity.com)$/;
+       if(regex1.test(email.value)||regex2.test(email.value))
+       {
+         span[0].innerText="Your Email is Valid";
+         span[0].style.color="lime";  
+       }
+       else{
+           span[0].innerText="Invalid Email Id";
+           span[0].style.color="red";
+       }
+    }
+      
+       function checknm(element) {
+        let textInput = element.value;
+        textInput = textInput.replace(/[^A-Za-z ]*$/gm, "");
+        element.value = textInput;
+    }
+
+
+     function validate() {
+        var name = document.getElementById('name')
+        var email1 = document.getElementById('email1')
+        var psw1 = document.getElementById('psw1')
+        var add = document.getElementById('add')
+        if (!name.value || !email1.value || !psw1.value || !add.value) {
+            alert("Fill all fields!");
+            return
+        }
+        //validate
+        var nameR = /^[a-zA-Z ]*$/;
+        if (!nameR.test(name.value)) {
+            alert("Name can contain only alphabets!!")
+            return
+        }
+        var emailR = /^\w+([\.-]?\w+)+@(christuniversity.in|christuniversity.com)$/
+        if (!emailR.test(email1.value)) {
+            alert("Invalid Email-id!! Only official mail-id allowed!!")
+            return
+        }
+        var passR = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[~`!@#$%^_+={}|:"<>,.?])[A-Za-z\d@$!%*?&]{8,}$/
+        if (!passR.test(psw1.value)) {
+            alert("Password must contain atleast 1 Upper Case, 1 Lower Case, 1 Digit, 1 Special Character and It should be minimum 8 characters!!")
+            return
+        }
+        alert("Registered Successfully")
+    }
+</script>
