@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="cookieform" action="">
+        <input type="text" name="uname" id="username" placeholder="Username">
+        <br> <br>
+        <button onclick="setCookie1()">Set Cookie 1</button>
+        <button onclick="getCookie1()">Get Cookie 1</button>
+        <button onclick="deleteCookie1()">Delete Cookie 1</button>
+        <br> <br>
+        <button onclick="writeCookie2()">Set Cookie 2</button>
+        <button onclick="getCookie2()">Get Cookie 2</button>
+        <button onclick="deleteCookie2()">Delete Cookie 2</button>
+        <br>  
+    </form>
+     
+    <script>  
+        // function writeCookie1()
+        // {
+        //     var now = new Date();
+        //     now.setMonth( now.getMonth() + 1 );
+        //     cookievalue = escape(document.cookieform.uname.value) + ";"
+            
+        //     document.cookie="name=" + cookievalue;
+        //     cookie1 = document.cookie;
+        //     document.cookie = "expires=" + now.toUTCString() + ";"
+        //     document.write ("Setting Cookies : " + "name=" + cookievalue );
+        // }
+        function writeCookie2()
+        {
+            var now = new Date();
+            now.setMonth( now.getMonth() + 1 );
+            cookievalue = escape(document.cookieform.uname.value) + ";"
+            
+            document.cookie="name=" + cookievalue;
+            cookie2 = document.cookie;
+            document.cookie = "expires=" + now.toUTCString() + ";"
+            document.write ("Setting Cookies : " + "name=" + cookievalue );
+        }
+        
+        function setCookie1()   
+        {  
+            document.cookie="name=" + cookievalue;
+            cookie1 = document.cookie;  
+            document.write ("Setting Cookies : " + cookie1);
+        }   
+        function setCookie2()   
+        {  
+            
+            cookie2 = document.cookie;  
+        }   
+          
+        function getCookie1()  
+        {  
+            if(cookie1.length!=0)  
+            {  
+            // alert(cookie1);  
+            document.write(cookie1);
+            }  
+            else  
+            {  
+                alert("Cookie not available");  
+            }  
+        }  
+          
+        function getCookie2()  
+        {  
+            if(cookie2.length!=0)  
+            {  
+            alert(cookie2);  
+            }  
+            else  
+            {  
+                alert("Cookie not available");  
+            }  
+        }  
+          
+        function deleteCookie1()  
+        {  
+            document.cookie=cookie1+";max-age=0";  
+            cookie1=document.cookie;  
+            alert("Cookie1 is deleted");  
+        }  
+          
+        function deleteCookie2()  
+        {  
+            document.cookie=cookie2+";max-age=0";  
+            cookie2=document.cookie;  
+           alert("Cookie2 is deleted");  
+        }  
+          
+        function displayCookie()  
+        {  
+        if(cookie1!=0&&cookie2!=0)  
+        {  
+            alert(cookie1+" "+cookie2);  
+        }  
+        else if(cookie1!=0)  
+        {  
+            alert(cookie1);  
+        }  
+        else if(cookie2!=0)  
+        {  
+            alert(cookie2);  
+        }  
+        else{  
+            alert("Cookie not available");  
+        }  
+          
+        }  
+          
+        </script>  
+</body>
+</html>
