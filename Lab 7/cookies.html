@@ -4,117 +4,66 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+    crossorigin="anonymous">
+    <title>Cookies</title>
 </head>
-<body>
-    <form name="cookieform" action="">
-        <input type="text" name="uname" id="username" placeholder="Username">
-        <br> <br>
-        <button onclick="setCookie1()">Set Cookie 1</button>
-        <button onclick="getCookie1()">Get Cookie 1</button>
-        <button onclick="deleteCookie1()">Delete Cookie 1</button>
-        <br> <br>
-        <button onclick="writeCookie2()">Set Cookie 2</button>
-        <button onclick="getCookie2()">Get Cookie 2</button>
-        <button onclick="deleteCookie2()">Delete Cookie 2</button>
-        <br>  
-    </form>
-     
-    <script>  
-        // function writeCookie1()
-        // {
-        //     var now = new Date();
-        //     now.setMonth( now.getMonth() + 1 );
-        //     cookievalue = escape(document.cookieform.uname.value) + ";"
-            
-        //     document.cookie="name=" + cookievalue;
-        //     cookie1 = document.cookie;
-        //     document.cookie = "expires=" + now.toUTCString() + ";"
-        //     document.write ("Setting Cookies : " + "name=" + cookievalue );
-        // }
-        function writeCookie2()
-        {
-            var now = new Date();
-            now.setMonth( now.getMonth() + 1 );
-            cookievalue = escape(document.cookieform.uname.value) + ";"
-            
-            document.cookie="name=" + cookievalue;
-            cookie2 = document.cookie;
-            document.cookie = "expires=" + now.toUTCString() + ";"
-            document.write ("Setting Cookies : " + "name=" + cookievalue );
-        }
+<body class="w-75 ms-5">
+    <form class="m-5" name="myForm">
+        <h3><u>Contact Details</u></h3>
+        <div class="row">
+            <label for="username" class="form-label" name="username">Name</label>
+            <div class="col">
+                <div class="mb-3">
+                    
+                    <input type="name" class="form-control" id="username" name="username" placeholder="Your name please...">
+                </div>
+            </div>
+            <div class="col">
+                <select id="demo" class="form-select ms-5 w-25 " onchange="changeBackground()">
+                    <option value="Select Color">Select Color</option>
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                    <option value="yellow">Yellow</option>
+                </select>
+            </div>
+        </div>
         
-        function setCookie1()   
-        {  
-            document.cookie="name=" + cookievalue;
-            cookie1 = document.cookie;  
-            document.write ("Setting Cookies : " + cookie1);
-        }   
-        function setCookie2()   
-        {  
-            
-            cookie2 = document.cookie;  
-        }   
-          
-        function getCookie1()  
-        {  
-            if(cookie1.length!=0)  
-            {  
-            // alert(cookie1);  
-            document.write(cookie1);
-            }  
-            else  
-            {  
-                alert("Cookie not available");  
-            }  
-        }  
-          
-        function getCookie2()  
-        {  
-            if(cookie2.length!=0)  
-            {  
-            alert(cookie2);  
-            }  
-            else  
-            {  
-                alert("Cookie not available");  
-            }  
-        }  
-          
-        function deleteCookie1()  
-        {  
-            document.cookie=cookie1+";max-age=0";  
-            cookie1=document.cookie;  
-            alert("Cookie1 is deleted");  
-        }  
-          
-        function deleteCookie2()  
-        {  
-            document.cookie=cookie2+";max-age=0";  
-            cookie2=document.cookie;  
-           alert("Cookie2 is deleted");  
-        }  
-          
-        function displayCookie()  
-        {  
-        if(cookie1!=0&&cookie2!=0)  
-        {  
-            alert(cookie1+" "+cookie2);  
-        }  
-        else if(cookie1!=0)  
-        {  
-            alert(cookie1);  
-        }  
-        else if(cookie2!=0)  
-        {  
-            alert(cookie2);  
-        }  
-        else{  
-            alert("Cookie not available");  
-        }  
-          
-        }  
-          
-        </script>  
+        <button class="btn btn-primary" onclick="setCookie1()">Set Cookie1</button>
+        <button class="btn btn-primary" onclick="getCookie1()">Get Cookie1</button>
+        <button class="btn btn-primary" onclick="deleteCookie1()">Delete Cookie1</button>
+        
+        <div class="progress mt-3">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+
+        <div class="mb-3 mt-3">
+            <label for="contact" class="form-label" name="contact">Contact</label>
+            <input type="text" class="form-control w-25" id="contact" name="contact" placeholder="Phone number">
+        </div>
+        <button class="btn btn-primary" onclick="setCookie2()">Set Cookie2</button>
+        <button class="btn btn-primary" onclick="getCookie2()">Get Cookie2</button>
+        <button class="btn btn-primary" onclick="deleteCookie2()">Delete Cookie2</button>
+
+        <div class="progress mt-3">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+
+        <div class="mb-3 mt-3">
+            <label for="emailId" class="form-label" name="email">Email Id</label>
+            <input type="name" class="form-control w-50" id="email" name="email" placeholder="Enter your email-id...">
+        </div>
+
+        <button class="btn btn-primary" onclick="setCookie3()">Set Cookie3</button>
+        <button class="btn btn-primary" onclick="getCookie3()">Get Cookie3</button>
+        <button class="btn btn-primary" onclick="deleteCookie3()">Delete Cookie3</button>
+    </form>
+
+    
+    
+
+      <script src="./script.js"></script>
 </body>
 </html>
