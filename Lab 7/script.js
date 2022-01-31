@@ -145,3 +145,9 @@ window.onload=function()
     }
 }
 
+
+function setImage()
+{
+document.getElementById('image-1').src = "img2.gif";
+alert("Image is setting!")
+}
