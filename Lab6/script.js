@@ -197,36 +197,16 @@ function validate()
   var uname = document.getElementById('username');
   var pwd = document.getElementById('password');
   var email = document.getElementById('email');
+  var span = document.getElementsByTagName('span');
   var phno = document.getElementById('phone');
   var dob = document.getElementById('birth-date');
   if(fullname.value == "" || uname.value == "" || pwd.value == "" || email.value == "" || phno.value == "" || dob.value == "")
   {
     checkname();
   }
-  // if(uname.value == "")
-  // {
-  //   validateUsername();
-  // }
-  // if(pwd.value == "")
-  // {
-  //   validatePassword();
-  // }
-  // if(email.value == "")
-  // {
-  //   validateEmail();
-  // }
-  // if(phno.value == "")
-  // {
-  //   validatePhone();
-  // }
-  // if(dob.value == "")
-  // {
-  //   validatedob();
-  // }
-
   else
   {
-    return false;
+    window.open("https://www.w3schools.com");
   }
 }
     
