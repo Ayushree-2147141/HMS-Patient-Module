@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,13 +8,13 @@
     <script src="./angular.min.js"></script>
     
 </head>
-<body ng-app="app">
-    <div ng-controller="RecordsController">
+<body ng-controller="RecordsController">
+    <!-- <div ng-controller="RecordsController"> -->
         <!-- Firstname:
         <input type="text" ng-model="firstname" placeholder="Firstname">
         Lastname:
         <input type="text" ng-model="lastname" placeholder="Lastname"> -->
-        Rows to Display:<input type="number" step="1" min="0" max="10">
+        <!-- Rows to Display:<input type="number" step="1" min="0" max="10">
         <table cellpadding="4" cellspacing="4" border="1">
             <tr>
                 <th>Id</th>
@@ -32,9 +32,24 @@
                 <td>{{emp.salary}}</td>
                 <td>{{emp.specialisation}}</td>
             </tr>
-        </table>
+        </table> -->
 
-    </div>
+    <!-- </div> -->
+
+    <table cellpadding="4" cellspacing="4" border="2">
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Gender</td>
+            <td>Salary</td>
+        </tr>
+        <tr ng-repeat="item in records">
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.gender}}</td>
+            <td>{{item.salary}}</td>
+        </tr>
+    </table>
     
     <script src="./script.js"></script>
 </body>

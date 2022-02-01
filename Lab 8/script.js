@@ -18,9 +18,9 @@ app.controller("RecordsController",function($scope,$http)
     $http.get("https://github.com/Ayushree-2147141/HMS-Patient-Module/blob/main/Lab%208/patient.json")
     .success(function(response)
     {
-        records = response.doctors;
-        $scope.doctors = records;
+        
+        $scope.names = response.records;
     });
-    $scope.rowlimit=6;
+    // $scope.rowlimit=6;
 }
 );
