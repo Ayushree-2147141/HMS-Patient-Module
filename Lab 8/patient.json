@@ -1,0 +1,13 @@
+{"records":[ 
+    {"id":1,"fname":"Ayushree","lname":"Chakrabartty","gender":"Female","salary":300000},
+    {"id":2,"fname":"Adarsh","lname":"Verma","gender":"Male","salary":40000},
+    {"id":3,"fname":"Jeetank","lname":"Reenesh","gender":"Male","salary":30000},
+    {"id":4,"fname":"Divya","lname":"Prasad","gender":"Female","salary":120000},
+    {"id":5,"fname":"Priyanka","lname":"Yadav","gender":"Female","salary":100000},
+    {"id":6,"fname":"Ankur","lname":"Sharma","gender":"Male","salary":30000},
+    {"id":7,"fname":"Reuben","lname":"Kurian","gender":"Male","salary":35000},
+    {"id":8,"fname":"Krishna","lname":"Bansal","gender":"Male","salary":23000},
+    {"id":9,"fname":"Sunny","lname":"Dahit","gender":"Male","salary":45000},
+    {"id":10,"fname":"Akriti","lname":"Saxena","gender":"Female","salary":30000}
+    ]
+}
