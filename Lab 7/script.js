@@ -144,10 +144,59 @@ window.onload=function()
         document.body.style.backgroundColor=a[0];
     }
 }
+ 
 
-
-function setImage()
-{
-document.getElementById('image-1').src = "img2.gif";
-alert("Image is setting!")
+function changeImage() {
+  var img = document.getElementById('image-1');
+  img.src = './img2.gif';
+  document.getElementById('image-1').appendChild(img);
+  // down.innerHTML = "Image Element Added."; 
 }
+
+function clickCounter() {
+  if (sessionStorage.clickcount) {
+    sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
+  } else {
+    sessionStorage.clickcount = 1;
+    }
+  document.getElementById("counter").innerHTML = sessionStorage.clickcount;
+}
+
+
+function setSession()
+{
+  var patientId = document.getElementById('patientId').value;
+  var disease = document.getElementById('diagnosis').value;
+
+  if(patientId.value == '' || disease.value == '')
+  {
+    alert('Blank Input! Failed to apply session!');
+  }
+  else
+  {
+    window.sessionStorage.setItem(patientId,disease);
+    alert('Session set!')
+  }
+  
+}
+
+// function getSession()
+// {
+//   var disease = document.getElementById('diagnosis');
+//   // sessionStorage.patientId = "psoriasis"
+//   var x = sessionStorage.getItem(disease).value;
+//   // document.getElementById("demo").innerHTML = x;
+//   alert(x)
+// }
+
+
+    // function DisplaySessionTimeout() {
+    //   var sessionTimeout = "<%= Session.Timeout %>";
+    //     sessionTimeout = sessionTimeout - 1;
+
+    //     if (sessionTimeout >= 0)
+    //       window.setTimeout("DisplaySessionTimeout()", 60000);
+    //     else {
+    //         alert("Your current Session is over due to inactivity.");
+    //     }
+    // }

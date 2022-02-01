@@ -20,7 +20,7 @@
                 </div>
             </div>
             <div class="col">
-                <select id="demo" class="form-select ms-5 w-25 " onchange="changeBackground()">
+                <select id="demo" class="form-select ms-5 w-50 " onchange="changeBackground()">
                     <option value="Select Color">Select Color</option>
                     <option value="red">Red</option>
                     <option value="green">Green</option>
@@ -61,25 +61,38 @@
     </form>
 
     
-    <div class="image-section ms-5">
-        <h3><u>Change Image</u></h3>
-        <div class="button-image-1">
-            <button class="btn btn-primary" onclick="setImage()">Change Image</button>
-            <!-- <button class="btn btn-primary" onclick="getImage()">Get Image</button>
-            <button class="btn btn-primary" onclick="changeImage()">Change Image</button> -->
+    <div class="row w-100">
+        <div class="col">
+            <div class="image-section ms-5 " id="image-section">
+                <h3><u>Change Image</u></h3>
+                <img src="./img1.gif" alt="" id="image-1" style="width:200px; height:200px;">
+                <button onclick = "changeImage()" class="btn btn-primary m-2"> Change Image! </button>                     
+            </div>
         </div>
-        <img src="./img1.gif" alt="some image"  class="mt-3 mb-5" style="width:200px; height:200px;" id="image-1">
+        <div class="col ms-5">
+            
+            <div class="row">
+                <h3><u>Session</u></h3>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Patient id" id="patientId">
+                    <!-- <button onclick="clickCounter()" class="btn btn-primary mt-3">Next</button>  -->
+                </div>
+                <div class="col">
+                    <div class="session">
+                        
+                        <!-- <p id="counter">0</p> -->
+                        <input type="text" class="form-control" placeholder="Patient disease" id="diagnosis">
+                        
+                    </div>
+                </div>
+            </div>
+            <p id="demo"></p>
+            <button onclick="setSession()" class="btn btn-primary mt-3">Set Session</button> 
+            <!-- <button onclick="getSession()" class="btn btn-primary mt-3">Get Session</button>  -->
+        <!-- <button onclick="DisplaySessionTimeout()" class="btn btn-primary">Count-Down</button> -->
+        </div>
     </div>
-
-
-    <div class="session ms-5">
-        <h3><u>Session</u></h3>
-        <!-- <p id="counter">0</p>
-        <button onclick="clickCounter()" class="btn btn-primary">Next</button>
-         -->
-    </div>
-
-    
+   
 
       <script src="./script.js"></script>
 </body>
