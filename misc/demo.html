@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="validate()" class="w-50 m-5">
+        <div class="form-group">
+            <input type="text" placeholder="Enter Fullname" class="form-control primary item w-50" id="fullname" onkeyup="validateFullname()">
+            <span></span>
+        </div>
+        <div class="form-group">
+            <input type="text" placeholder="Enter username" class="form-control primary item w-50" id="username" onkeyup="validateUser()">
+            <span></span>
+        </div>
+        <div class="form-group">
+            <input type="password" placeholder="Password" class="form-control primary item w-50" id="password" onkeyup="validatePassword();">
+            <span></span>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-block submit btn-primary w-25" onclick="validate();return false;">Submit</button>
+        </div>
+    </form>
+    <script>
+        var span = document.getElementsByTagName("span");
+        var user = document.getElementById('username');
+        var pwd = document.getElementById('password');
+        var fullname = document.getElementById('fullname');
+
+        function validateFullname()
+        {
+            const regex = /^([a-zA-Z\s.]+)$/;
+            if(fullname.value.trim() == '' || fullname.value.trim() == null)
+            {
+                span[0].innerText="Blank name!";
+                span[0].style.color="red";
+                validateUser();
+                // return false;
+            }
+
+            else if(regex.test(fullname.value.trim()))
+            {
+                span[0].innerText="Valid Name!";
+                span[0].style.color="green";
+                validateUser();
+            }
+            else
+            {
+                span[0].innerText="Invalid Name!";
+                span[0].style.color="red";
+                return false;
+            }
+        }
+        function validateUser()
+        {
+            const regex = /^([a-zA-Z0-9\.@_]+)$/;
+            if(user.value.trim() == '' || user.value.trim() == null)
+            {
+                span[1].innerText="Blank username!";
+                span[1].style.color="red";
+                validatePassword();
+                return false;
+            }
+            else if(regex.test(user.value.trim()))
+            {
+                span[1].innerText="Valid Username!";
+                span[1].style.color="green";
+                validatePassword();
+            }
+            else
+            {
+                span[1].innerText="Invalid Username!";
+                span[1].style.color="red";
+                return false;
+            }
+           
+        }
+
+
+        function validatePassword()
+        {
+            const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[~`!@#$%^_+={}|:"<>,.?])[A-Za-z\d@$!%*?&]{5,20}$/;
+            if(pwd.value.trim() == '' || pwd.value.trim() == null)
+            {
+                span[2].innerText="Blank pwd!"
+                span[2].style.color="red";
+                return false;
+            }
+            if(regex.test(pwd.value.trim())) 
+            {
+                if(pwd.value.trim().length > 7 && pwd.value.trim().length <= 15)
+                {
+                    span[2].innerText="Strong password!"
+                    span[2].style.color="green"
+                    return true;
+                }
+                else  if(pwd.value.trim().length > 15)
+                {
+                    span[2].innerText="Long password!"
+                    span[2].style.color="lime"
+                    return false;
+                }
+                else
+                {
+                    span[2].innerText="Weak password!"
+                    span[2].style.color="red"
+                    return false;
+                }
+                
+            }
+            else
+            {
+                span[2].innerText="Invalid password!"
+                span[2].style.color="red"
+                return false;
+            }
+        }
+
+        function validate()
+        {
+            if(user.value.trim() == '' || password.value.trim() == '' || fullname.value.trim() == '')
+            {
+                // for(var i = 0; i < 2; i++) 
+                // {
+                //     span[i].innerText="Blank!";
+                //     span[i].style.color="red";
+                // }
+                validateFullname();
+            //    return false;
+            }
+            else
+            {
+                window.open("https://www.google.com")
+            }
+
+        }
+    </script>
+</body>
+</html>
