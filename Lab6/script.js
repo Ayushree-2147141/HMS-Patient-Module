@@ -32,16 +32,16 @@ function checkname()
   if (fullname.value.trim() == "" || fullname.value.trim() == null) 
   {
     span[1].innerText="Blank Name!";
-    fullname.style.border="2px red solid";
+    // fullname.style.border="2px red solid";
     span[1].style.color = "red";
-    validateUsername();
+    return false;
   } 
   if (regex.test(fullname.value.trim()) ) 
   {     
     span[1].innerText = "Valid Name!";
-    span[2].style.color = "green";
-    username.style.border= "2px green solid";
-    validateUsername();
+    span[1].style.color = "green";
+    // username.style.border= "2px green solid";
+    return true;
   }
   else 
   {
@@ -60,15 +60,14 @@ function validateUsername()
     span[2].innerText = "Blank Username!";
     username.style.border = "2px red solid";
     span[2].style.color= "red";
-    validatePassword();
-    // return false;
+    
   }
   if(regex.test(uname.value.trim()))
   {
     span[2].innerText="Valid username!";
     span[2].style.color = "green";
-    username.style.border= "2px green solid";
-    validatePassword();
+    // username.style.border= "2px green solid";
+    
   }
   else
   {
@@ -79,42 +78,90 @@ function validateUsername()
   // return true;
 }
 
+// function validatePassword()
+// {
+//   const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,20})/;
+  
+//   if(pwd.value.trim() == "" || pwd.value.trim() == null)
+//   {
+//     span[3].innerText = "Blank Password!";
+//     pwd.style.border = "2px red solid";
+//     span[3].style.color= "red";
+    
+//   }
+//   else if(regex.test(pwd.value.trim()))
+//   {
+//     if(pwd.value.trim().length >7 && pwd.value.trim().length < 15)
+//     {
+//       span[3].innerText = "Strong Password!";
+//       pwd.style.border = "2px green solid";
+//       span[3].style.color= "green";
+     
+//     }
+//     if(pwd.value.trim().length < 7)
+//     {
+//       span[3].innerText = "Weak Password!";
+//       pwd.style.border = "2px yellow solid";
+//       span[3].style.color= "lime";
+   
+//     }
+//   }
+//   else
+//   {
+//     span[3].innerText = "Invalid Password!";
+//     username.style.border = "2px red solid";
+//     return false;
+//   }
+//   // validateEmail();
+//   // return true;
+// }
+
+    
+         
 function validatePassword()
+{ 
+var user = document.getElementById("password").value;
+var user2 = document.getElementById("password");
+
+var re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{5,20})/;
+if (user == "" || user == null)
 {
-  const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[~`!@#$%^_+={}|:"<>,.?])[A-Za-z\d@$!%*?&]{8,}$/;
-  if(pwd.value.trim() == "" || pwd.value.trim() == null)
-  {
-    span[3].innerText = "Blank Password!";
-    pwd.style.border = "2px red solid";
-    span[3].style.color= "red";
-    validateEmail();
-    // return false;
-  }
-  if(regex.test(pwd.value.trim()))
-  {
-    if(pwd.value.trim().length >7 && pwd.value.trim().length < 15)
-    {
-      span[3].innerText = "Strong Password!";
-      pwd.style.border = "2px green solid";
-      span[3].style.color= "green";
-      validateEmail();
-    }
-    if(pwd.value.trim().length < 7)
-    {
-      span[3].innerText = "Weak Password!";
-      pwd.style.border = "2px yellow solid";
-      span[3].style.color= "lime";
-      validateEmail();
-    }
-  }
-  else
-  {
-    span[3].innerText = "Invalid Password!";
-    username.style.border = "2px red solid";
-    return false;
-  }
-  // validateEmail();
-  // return true;
+span[3].innerText="Blank password!";
+span[3].style.color = "red";
+user2.style.border="3px red solid";
+return false;
+} 
+else if(re.test(user.trim()))
+{
+if(user.trim().length >= 8 && user.trim().length <= 15)
+{
+span[3].innerText="Strong password!";
+// user2.style.border = "3px green solid";
+span[3].style.color="green";
+return true;
+}
+else if(user.trim().length > 15)
+{
+span[3].innerText = "Too long password!";
+// user2.style.border = "4px yellow solid";
+span[3].style.color = "lime";
+return false;
+}
+else
+{
+span[3].innerText ="Weak password!"
+span[3].style.color = "blue";
+return false;
+}
+}
+else
+{
+span[3].innerText="Invalid Password!";
+// user2.style.border = "4px green solid";
+span[3].style.color = "red";
+return false;
+}
+
 }
 
 
@@ -126,15 +173,15 @@ function validateEmail()
     span[4].innerText = "Blank Email!";
     email.style.border = "2px red solid";
     span[4].style.color= "red";
-    validatePhone();
-    // return false;
+    
+ 
   }
   if(regex.test(email.value.trim()))
   {
     span[4].innerText = "Valid Email!";
     span[4].style.color="green";
     email.style.border="green"; 
-    validatePhone();
+  
   }
   else 
   {
@@ -153,7 +200,7 @@ function validatePhone()
     span[5].innerText = "Blank Phone-number!";
     phno.style.border = "2px red solid";
     span[5].style.color= "red";
-    validatedob();
+   
     // return false;
   }
   if(regex.test(phno.value.trim()))
@@ -161,7 +208,7 @@ function validatePhone()
     span[5].innerText = "Valid Phone-number!";
     span[5].style.color="green";
     email.style.border="green";
-    validatedob();
+    
   }
   if(phno.value.trim().length > 10)
   {
@@ -193,20 +240,20 @@ function validatedob()
 
 function validate()
 {
-  var fullname = document.getElementById('fullname');
-  var uname = document.getElementById('username');
-  var pwd = document.getElementById('password');
-  var email = document.getElementById('email');
-  var span = document.getElementsByTagName('span');
-  var phno = document.getElementById('phone');
-  var dob = document.getElementById('birth-date');
+
   if(fullname.value == "" || uname.value == "" || pwd.value == "" || email.value == "" || phno.value == "" || dob.value == "")
   {
     checkname();
+    validateEmail();
+    validatePassword();
+    validateUsername();
+    validatedob();
+    validatePhone();
   }
   else
   {
-    window.open("https://www.w3schools.com");
+    return;
   }
 }
     
+
