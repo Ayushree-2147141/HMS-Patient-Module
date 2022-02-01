@@ -1,0 +1,12 @@
+{"patients":[
+    {"id":1, "name":"Ayushree", "age":22, "salary":100000, "gender":"female"},
+    {"id":2, "name":"Divya", "age":22, "salary":100000, "gender":"female"},
+    {"id":3, "name":"Priya", "age":22, "salary":100000, "gender":"female"},
+    {"id":4, "name":"Hrishik", "age":22, "salary":100000, "gender":"male"},
+    {"id":5, "name":"Rothu", "age":22, "salary":100000, "gender":"female"},
+    {"id":6, "name":"Pothu", "age":22, "salary":100000, "gender":"male"},
+    {"id":7, "name":"tinu", "age":22, "salary":100000, "gender":"female"},
+    {"id":8, "name":"Tinku", "age":22, "salary":100000, "gender":"female"},
+    {"id":9, "name":"joy", "age":22, "salary":100000, "gender":"male"},
+    {"id":10, "name":"amy", "age":22, "salary":100000, "gender":"female"}
+]}
