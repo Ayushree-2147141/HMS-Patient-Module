@@ -1,26 +1,25 @@
-var app = angular.module("Records",[]);
-app.controller("RecordsController",function($scope,$http)
+var app = angular.module('myApp',[]);
+app.controller('customersCtrl',function($scope, $http)
 {
-    // var employees=[
-    //     {"firstname": "Ayushree",
-    //     "lastname" : "Chakrabartty"},
-    //     {"firstname" :  "Hrishik",
-    //     "lastname" : "Kumar"},
-    //     {"firstname" : "Tanushree",
-    //     "lastname" : "Chakrabartty"},
-    //     {"firstname" : "Divya",
-    //     "lastname" : "Prasad"}
-
-    // ]
-    // $scope.employees=employees;
-    // $scope.rowlimit = 4;
-
-    $http.get("https://github.com/Ayushree-2147141/HMS-Patient-Module/blob/main/Lab%208/patient.json")
-    .success(function(response)
+    $http.get("https://ayushree-2147141.github.io/JSON/doctors.json")
+    .then(function(response)
     {
-        
-        $scope.names = response.records;
+        $scope.myData = response.data.doctors;
+        $scope.rowlimit = response.data.length();
+        // $scope.orderByMe = function(x) 
+        // {
+        //     $scope.myOrderBy = x;
+        // }
     });
-    // $scope.rowlimit=6;
-}
-);
+    
+});
+
+app.filter("myfilter",function()
+{
+    return function(input)
+    {
+        return input.substring(0,1).toUpperCase() + input.substring(1);
+    }
+});
+
+
