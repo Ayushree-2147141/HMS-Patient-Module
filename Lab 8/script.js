@@ -11,6 +11,10 @@ app.controller('customersCtrl',function($scope, $http)
         //     $scope.myOrderBy = x;
         // }
     });
+
+    $scope.orderByMe = function(x) {
+        $scope.myOrderBy = x;
+      }
     
 });
 
@@ -22,4 +26,12 @@ app.filter("myfilter",function()
     }
 });
 
+
+app.filter('myNameFilter',function()
+{
+    return function(input)
+    {
+        return 'Dr. ' + input;
+    }
+})
 
