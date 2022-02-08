@@ -33,5 +33,5 @@ app.filter('myNameFilter',function()
     {
         return 'Dr. ' + input;
     }
-})
+});
 
