@@ -1,0 +1,11 @@
+{"schedule":[
+    {"doctorId":1, "doctorName":"Dr.Divya","specialisation":"Gynaecologist","time":"12:00-16:00"},
+    {"doctorId":2, "doctorName":"Dr.Priyanka","specialisation":"Oncologist","time":"16:00-18:00"},
+    {"doctorId":3, "doctorName":"Dr.Ankur","specialisation":"Physician","time":"10:00-4:00"},
+    {"doctorId":4, "doctorName":"Dr.Adarsh","specialisation":"ENT specialist","time":"12:00-5:00"},
+    {"doctorId":5, "doctorName":"Dr.Priya","specialisation":"Oncologist","time":"08:00-10:00"},
+    {"doctorId":6, "doctorName":"Dr.Jeetank","specialisation":"Physician","time":"12:00-4:00"},
+    {"doctorId":7, "doctorName":"Dr.Reuben","specialisation":"Oncologist","time":"13:00-16:00"},
+    {"doctorId":8, "doctorName":"Dr.Sunny","specialisation":"Gynaecologist","time":"09:00-4:00"},
+    {"doctorId":9, "doctorName":"Dr.Amber","specialisation":"Gynaecologist","time":"19:00-21:00"}
+]}
