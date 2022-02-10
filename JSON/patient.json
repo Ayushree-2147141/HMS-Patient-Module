@@ -1,0 +1,9 @@
+{"patient":[
+    {"doctorName":"Dr. Divya","date":"12-03-2022","time":"12:00-16:00","reason":"pain in joints"},
+    {"doctorName":"Dr. Shruti","date":"24-01-2022","time":"10:00-13:00","reason":"headache"},
+    {"doctorName":"Dr. Amber","date":"12-10-2021","time":"16:00-19:00","reason":"no sleep"},
+    {"doctorName":"Dr. Reuben","date":"16-05-2022","time":"17:00-21:00","reason":"dry skin"},
+    {"doctorName":"Dr. Adarsh","date":"12-03-2021","time":"15:00-18:00","reason":"dizziness"},
+    {"doctorName":"Dr. Priyanka","date":"12-03-2021","time":"12:00-16:00","reason":"pain in joints"},
+    {"doctorName":"Dr. Divya","date":"21-11-2021","time":"15:00-16:00","reason":"headache"}
+]}
