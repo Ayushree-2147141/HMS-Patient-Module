@@ -1,34 +1,71 @@
-var app = angular.module('myapp',['ngRoute']);
-app.config(function($routeProvider) {
-    $routeProvider.when('/appointments',
+angular.module('myapp',['ngRoute'])
+.config(function($routeProvider)
+{
+    $routeProvider.when('/appointment',
     {
-        templateUrl: 'HTML files/appointments.html',
-        controller : 'apptcntrl'
-
-    }).when('/medicalhistory',
+        templateUrl:'html/diagnosis_report.html',
+        controller:'firstctrl'
+    }).when('/schedule',
     {
-        templateUrl : 'HTML files/medical_history.html',
-        controller: 'historycntrl'
+        templateUrl:'html/doctor_schedule.html',
+        controller:'secondctrl'
+    }).when('/patient',
+    {
+        templateUrl:'html/patient_info.html',
+        controller:'thirdctrl'
+    }).when('/patient/:first/:last/:age',
+    {
+        templateUrl:'html/patient_info.html',
+        controller:'thirdctrl'
+    })
+})
+.controller('myctrl',function()
+{
 
-    }).when('/patientinfo',{
+})
 
-        templateUrl : 'HTML files/medical_reports.html',
-        controller : 'patientinfocntrl'
-
+.controller("secondctrl",function($scope,$http)
+{
+    $http.get("https://ayushree-2147141.github.io/JSON/doctorSchedule.json")
+    .success(function(response)
+    {
+        $scope.schedule=response.schedule;
     });
 })
 
-app.controller('myappcntrl',function()
+
+.controller("thirdctrl",function($scope,$routeParams)
 {
-
-});
-
-
-app.controller("",function($scope,$http)
-{
-    $http.get('student.json')
-    .success(function(response)
+    $scope.message="Patient Information"
+    if($routeParams.first && $routeParams.last && $routeParams.age)
     {
-        $scope.students=response.records;
+        $scope.person={
+            first:$routeParams.first,
+            last:$routeParams.last,
+            age:$routeParams.age
+        };
+    }
+})
+
+
+.controller("firstctrl",function($scope,$http)
+{
+    $http.get("https://ayushree-2147141.github.io/JSON/patient.json")
+    .then(function(response)
+    {
+        $scope.patient = response.data.patient;
     });
-});
+})
+
+
+const showImage = () => {
+    document.getElementById("first").style.display ='block';
+}
+
+const showDetailedReport = () => {
+    document.getElementById("report").style.display ='block';
+}
+
+const prescription = () => {
+    document.getElementById("prescription").style.display ='block';
+}

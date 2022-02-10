@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table cellspacing="2" cellpadding="2" class="table table-striped table-warning">
+
+        <tr>
+            <th>Check</th>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Reason</th>
+        </tr>
+       <tr ng-repeat="patient in patient">
+           <td><input type="checkbox" name="muliplte" id="multiple"></td>
+           <td>{{patient.doctorName}}</td>
+           <td>{{patient.date}}</td>
+           <td>{{patient.time}}</td>
+           <td>{{patient.reason}}</td>
+       </tr>
+    </table>
+    
+
+    <!-- <button class="btn btn-warning" href="#/schedule">Schedule Appointment</button> -->
+</body>
+</html>

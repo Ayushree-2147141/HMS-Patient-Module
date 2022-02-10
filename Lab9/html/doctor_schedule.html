@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <div class="row">
+        <div class="col">
+            <h3 class="d-flex justify-content-center text-danger fw-bold">Doctor Schedule</h3>
+        </div>
+        <div class="col">
+            <label for="searchDoctor">Search Doctor:</label>
+            <input type="text" class="form-control rounded w-75" ng-model="searchDoctor" placeholder="Search doctor by id, name, department" placeholder="Search">
+        </div>
+    </div>
+    
+
+    <table>
+        <div class="row d-flex justify-content-center">
+            <div class="card m-2" style="width: 15rem;display:flex;" ng-repeat="schedule in schedule | filter:searchDoctor">
+                <div class="card-body">
+                  <h5 class="card-title "><b>{{schedule.doctorName}}</b></h5>
+                  <p class="card-text text-warning">{{schedule.date}}</p>
+                  <p class="card-text text-danger">{{schedule.time}}</p>
+                  <a href="#/booked" class="btn btn-warning">Book Appointment</a>
+                </div>
+            </div>
+        </div>
+       
+    </table>
+</body>
+</html>
