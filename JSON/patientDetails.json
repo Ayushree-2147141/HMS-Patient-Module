@@ -1,0 +1,58 @@
+[
+    {
+      "name": "Priyanka Yadav",
+      "email": "priyanka@gmail.com",
+      "phone": "6745237856",
+      "age": 23,
+      "gender":"female",
+      "address":"SG Palya"
+    },
+    {
+        "name": "Divya Prasad",
+        "email": "divya@gmail.com",
+        "phone": "4589567845",
+        "age": 22,
+        "gender":"female",
+        "address":"Koramangala"
+    },
+    {
+        "name": "Priya Gupta",
+        "email": "priya@gmail.com",
+        "phone": "6745899067",
+        "age": 23,
+        "gender":"female",
+        "address":"Ranchi"
+    },
+      {
+        "name": "Ankur Sharma",
+        "email": "ankur@gmail.com",
+        "phone": "6745893455",
+        "age": 28,
+        "gender":"Male",
+        "address":"Uttar Pradesh"
+    },
+      {
+        "name": "Adarsh Verma",
+        "email": "adarsh@gmail.com",
+        "phone": "9876543210",
+        "age": 26,
+        "gender":"Male",
+        "address":"Delhi"
+    },
+    {
+        "name": "Pradeep Singh",
+        "email": "pradeep@gmail.com",
+        "phone": "9876546778",
+        "age": 26,
+        "gender":"Male",
+        "address":"Rampur"
+    },
+    {
+        "name": "Amber Linda",
+        "email": "amber@gmail.com",
+        "phone": "8879065789",
+        "age": 56,
+        "gender":"Male",
+        "address":"Ramchi"
+    }
+  ]
